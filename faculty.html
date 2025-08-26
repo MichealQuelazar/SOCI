@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Faculty | Joy University</title>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+.page-header-faculty {
+    min-height: 500px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    left: 0;
+    right: 0;
+}
+.faculty-profile-card {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border: 2px solid #ededed;
+  border-radius: 6px;
+  padding: 32px 32px 32px 24px;
+  margin: 32px auto;
+  max-width: 1100px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  gap: 36px;
+  transition: background 0.3s, color 0.3s;
+}
+.faculty-profile-img img {
+  width: 220px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  background: #f3f4f6;
+  display: block;
+}
+.faculty-profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 16px;
+}
+.faculty-profile-name {
+  font-size: 2rem;
+  color: #b91c1c;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-family: 'Times New Roman', Times, serif;
+  transition: color 0.3s;
+}
+.faculty-profile-degree {
+  font-size: 1.2rem;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-family: 'Times New Roman', Times, serif;
+  transition: color 0.3s;
+}
+.faculty-profile-title {
+  font-size: 1.15rem;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  transition: color 0.3s;
+}
+.faculty-profile-bio p {
+  font-size: 1.08rem;
+  color: #222;
+  margin-bottom: 16px;
+  line-height: 1.7;
+  font-family: 'Times New Roman', Times, serif;
+  transition: color 0.3s;
+}
+.faculty-profile-readmore {
+  background: #b91c1c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 28px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  align-self: flex-start;
+  margin-top: 8px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.faculty-profile-readmore:hover {
+  background: #a31b1b;
+}
+.faculty-profile-card:hover {
+  background: #a32626;
+  color: #fff;
+}
+.faculty-profile-card:hover .faculty-profile-name,
+.faculty-profile-card:hover .faculty-profile-degree,
+.faculty-profile-card:hover .faculty-profile-title,
+.faculty-profile-card:hover .faculty-profile-bio p {
+  color: #fff;
+}
+.faculty-profile-card:hover .faculty-profile-readmore {
+  background: #fff;
+  color: #a32626;
+  border: none;
+}
+@media (max-width: 900px) {
+  .faculty-profile-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 8px;
+    gap: 18px;
+  }
+  .faculty-profile-img img {
+    width: 140px;
+    height: 170px;
+  }
+  .faculty-profile-info {
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+</style>
+</head>
+<body>
+<!-- Main Header -->
+<header class="main-header">
+  <div class="top-bar">
+    <div class="container">
+      <div class="social-links">
+        <!-- Social Media Links -->
+        <a aria-label="Facebook" href="https://www.facebook.com/JU.JoyUniversity" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+        <a aria-label="Instagram" href="https://www.instagram.com/ju.joyuniversity/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+        <a aria-label="LinkedIn" href="https://www.linkedin.com/company/joy-university-tn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+        <a aria-label="YouTube" href="https://www.youtube.com/channel/UCwCoUuoAHUpZh2bHpWrYB_w" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="top-bar-actions">
+        <a class="btn btn-primary" href="https://admissions.joyuniversity.edu.in/">Admission Open 2025</a>
+        <a class="btn btn-primary" href="https://joyuniversity.edu.in/UGC%202(f)%20Certificate%20for%20Joy%20University.pdf">UGC 2(f) Certificate</a>
+        <a class="top-bar-link" href="#">Give</a>
+        <a class="top-bar-link" href="#">Careers</a>
+        <a class="top-bar-link" href="#">Fee Payment</a>
+        <a class="top-bar-link" href="https://www.joyuniversity.hosting.acm.org/" rel="noopener" target="_blank">ACM Student Chapter</a>
+      </div>
+    </div>
+  </div>
+  <!-- Establishment Info Bar -->
+  <div class="establishment-info-bar">
+    <div class="container">
+      <div class="establishment-info">
+        <div>Estd. vide Tamil Nadu State Pvt. Universities Act 2019</div>
+        <div>UGC - Approved</div>
+      </div>
+    </div>
+  </div>
+  <!-- Header Bar -->
+  <div class="header-bar">
+    <div class="header-logo-title">
+      <img alt="Joy University Logo" class="header-logo-plain" src="https://joyuniversity.edu.in/images/jylogo250163.png"/>
+      <div class="header-title-block">
+        <div class="header-title">School of Computational Intelligence <span class="header-abbr">(SOCI)</span></div>
+        <div class="header-subtitle">Joy University</div>
+      </div>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+  </div>
+  
+<nav class="main-nav">
+    <!-- <div class="container nav-header-flex"> -->
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown"><a href="#">People</a>
+          <ul class="dropdown-menu">
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a href="Staff.html">Staff</a></li>
+            <li><a href="Research-Scholars.html">Research Scholars</a></li>
+            <li><a href="Students.html">Students</a></li>
+            <li><a href="Join-Us.html">Join Us !</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#">Research</a>
+          <ul class="dropdown-menu">
+            <li><a href="Research-Areas.html">Research Areas</a></li>
+            <li><a href="Publications.html">Publications</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#">Academics</a>
+          <ul class="dropdown-menu">
+            <li><a href="programmes-offered.html">Programmes</a></li>
+            <li class="dropdown-submenu"><a href="programmes-offered.html">Curriculum</a>
+              <ul class="dropdown-menu">
+                <li><a href="btech.html">B.Tech</a></li>
+                <li><a href="bca.html">BCA</a></li>
+              </ul>
+            </li>
+            <li><a href="timetable.html">Time Table</a></li>
+            <li><a href="https://portal.vmedulife.com/public/auth/#/login/Soci-Tirunelveli" target="_blank">ERP of SOCI</a></li>
+            <li><a href="https://joyuniversity.edu.in/University/School-of-Computational-Intelligence">Outreach</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#">Events</a>
+          <ul class="dropdown-menu">
+            <li><a href="events.html">Department Events</a></li>
+            <li><a href="seminar.html">Department Seminar</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#">Resources</a>
+          <ul class="dropdown-menu">
+            <li><a href="labs1.html">Labs</a></li>
+            <li><a href="library.html">Library</a></li>
+            
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#">About Us</a>
+          <ul class="dropdown-menu">
+            <li><a href="objectives.html">Objectives</a></li>
+            <li><a href="philosophy.html">Philosophy</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="Dean.html">Message from Dean</a></li>
+          </ul>
+        </li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<!-- Main Content -->
+<main class="main-content">
+  <section class="faculty-section">
+    <h1 class="section-header">School of Computational Intelligence Faculty</h1>
+    <!-- Prof. Dr. Chithra D Gracia -->
+    <div class="faculty-profile-card">
+      <div class="faculty-profile-img">
+        <img src="https://joyuniversity.edu.in/userfiles/Faculty/bad8f8931d4a4f028a4b21ccd6c0b543.png" alt="Prof. Dr. Chithra D Gracia" />
+      </div>
+      <div class="faculty-profile-info">
+        <div class="faculty-profile-name">Prof. Dr. Chithra D Gracia</div>
+        <div class="faculty-profile-degree">Ph.D - NIT, Tiruchirapalli</div>
+        <div class="faculty-profile-title">Professor & Dean - School of Computational Intelligence</div>
+        <div class="faculty-profile-bio">
+          <p class="bio-para">Prof. Dr. Chithra D Gracia is working as an Assistant Professor in the Department of Computing & Information Systems under the School of Computational Intelligence, Joy University, Kanyakumari, Tamil Nadu, India. She has her Bachelor’s Degree (B.E) in Computer Science and Engineering from Manonmanian Sundaranar University, Tirunelveli, Master’s Degree (M.E) in Computer Science and Engineering from Anna University, Chennai and Ph.D. in Computer Science and Engineering from National Institute of Technology, Tiruchirapalli.</p>
+          <p class="bio-para" style="display:none;">She has worked as faculty in Engineering Colleges and University in Tamil Nadu and has handled classes in National Institute of Technology, Tiruchirapalli. Prior to joining Joy University, she has 12 and 6 years of experience in teaching and research respectively. She is the only recipient of HTRA fellowship (2011 to 2016) in the department of Computer Science and Engineering for pursuing Ph.D at National Institute of Technology Tiruchirapalli from Ministry of Human Resource and Development (MHRD), Government of India.</p>
+          <p class="bio-para" style="display:none;">She has presented her research papers in leading international and national conferences in leading institutions in India. She has published more than 20 research papers in SCI and SCOPUS indexed International Journals, Conferences and Book chapters of repute in the field of Data Science. She has delivered many invited lectures on Machine Learning, Recommender Systems. She has been a professional facilitator of students and her teaching experience includes experiments on Learner centric teaching and flipped classroom. During her tenure, she was a nominated member in various committees assisting the administration in matters of importance. She is a reviewer of the reputed International journal, IEEE Systems. Her research areas include Machine Learning, Web services, Cloud computing, Fog computing and Edge Computing. She is a Life Member of Indian Society for Technical Education (MISTE).</p>
+        </div>
+        <button class="faculty-profile-readmore" onclick="toggleBio(this)">Read More</button>
+      </div>
+    </div>
+    <!-- Prof. Dr. Ayappasamy. K -->
+    <div class="faculty-profile-card">
+      <div class="faculty-profile-img">
+        <img src="https://joyuniversity.edu.in/userfiles/Faculty/75acf193ba5047fc902c98b9fa31ce75.jpg" alt="Prof. Dr. Ayappasamy. K" />
+      </div>
+      <div class="faculty-profile-info">
+        <div class="faculty-profile-name">Prof. Dr. Ayappasamy. K</div>
+        <div class="faculty-profile-degree">Ph.D - Pondicherry Central University</div>
+        <div class="faculty-profile-title">Associate Professor - School of Computational Intelligence</div>
+        <div class="faculty-profile-bio">
+          <p class="bio-para">Dr. Ayappasamy K. is an Associate Professor in Computing and Information Systems at the School of Computational Intelligence, Joy University, Kanyakumari, Tamil Nadu, India. He earned his B.Tech. and M.Tech. Degrees in Electronics and Communication Engineering (ECE) from Pondicherry Engineering College (PEC) affiliated with Pondicherry central university, and completed his Ph.D. in the field of 5G wireless communication at Pondicherry Central University, Puducherry, India.</p>
+          <p class="bio-para" style="display:none;">Before his current position, Dr. Ayappasamy worked as a Research Engineer, where he conducted research on heart-based phonocardiogram (PCG) signals using machine learning and deep learning models at the School of Electronic Systems and Automation, Digital University Kerala (IIITM Kerala) in Thiruvananthapuram, Kerala, India. He also served as an Assistant Professor in the Department of ECE at Christ College of Technology in Puducherry, India. In 2021, he was honored with the Dr. A. P. J. Abdul Kalam Teacher Award by the education minister of Puducherry.</p>
+        </div>
+        <button class="faculty-profile-readmore" onclick="toggleBio(this)">Read More</button>
+      </div>
+    </div>
+    <!-- Prof. Dr. Shyju Wilson -->
+    <div class="faculty-profile-card">
+      <div class="faculty-profile-img">
+        <img src="https://joyuniversity.edu.in/userfiles/Faculty/f97dfbb250574be3b5287fb62802b67a.png" alt="Prof. Dr. Shyju Wilson" />
+      </div>
+      <div class="faculty-profile-info">
+        <div class="faculty-profile-name">Prof. Dr. Shyju Wilson</div>
+        <div class="faculty-profile-degree">Ph.D - IIT Hyderabad</div>
+        <div class="faculty-profile-title">Assistant Professor - School of Computational Intelligence</div>
+        <div class="faculty-profile-bio">
+          <p class="bio-para">Prof. Dr. Shyju Wilson is currently serving as an Assistant Professor in the Department of Computing & Information Systems under the School of Computational Intelligence at Joy University, Kanyakumari, Tamil Nadu. He completed his Masters degree in Computer Science and Engineering from NIT Rourkela, Orissa and Ph.D. in Machine Learning from the Department of Computer Science and Engineering in Indian Institute of Technology Hyderabad, Telangana.</p>
+          <p class="bio-para" style="display:none;">He published his research works in highly reputed journals and conferences in IEEE. His areas of research interest spanned over Machine learning, Dictionary learning, Artificial intelligence etc. He had achieved good score in GATE, qualified UGC-NET and availed fellowship during doctoral research.</p>
+        </div>
+        <button class="faculty-profile-readmore" onclick="toggleBio(this)">Read More</button>
+      </div>
+    </div>
+    <!-- Prof. Dr. Mukesh Kumar -->
+    <div class="faculty-profile-card">
+      <div class="faculty-profile-img">
+        <img src="https://joyuniversity.edu.in/userfiles/Faculty/8db7be3f9b20415496b84ad8565f6cc0.webp" alt="Prof. Dr. Mukesh Kumar" />
+      </div>
+      <div class="faculty-profile-info">
+        <div class="faculty-profile-name">Prof. Dr. Mukesh Kumar</div>
+        <div class="faculty-profile-degree">Ph.D - IIT Guwahati</div>
+        <div class="faculty-profile-title">Assistant Professor - School of Computational Intelligence</div>
+        <div class="faculty-profile-bio">
+          <p class="bio-para">Dr. Mukesh Kumar is currently working as an Assistant Professor in the Department of Mechanical Engineering under the School of Computational Intelligence at Joy University, Kanyakumari, Tamil Nadu, India. He completed his Master’s degree in Mechanical Engineering from NIT Bhopal, Madhya Pradesh and Ph.D. in Design and Manufacturing from the Department of Mechanical Engineering in Indian Institute of Technology Guwahati, Assam.</p>
+        </div>
+        <button class="faculty-profile-readmore" onclick="toggleBio(this)">Read More</button>
+      </div>
+    </div>
+   
+    <div class="faculty-profile-card">
+      <div class="faculty-profile-img">
+        <img src="https://joyuniversity.edu.in/userfiles/Faculty/37d2309a88554ee487427504bc7137bb.webp" alt="Prof. Dr. Arun Balaji P" />
+      </div>
+      <div class="faculty-profile-info">
+        <div class="faculty-profile-name">Prof. Dr. Arun Balaji P</div>
+        <div class="faculty-profile-degree">Ph.D - VIT University</div>
+        <div class="faculty-profile-title">Assistant Professor - School of Computational Intelligence</div>
+        <div class="faculty-profile-bio">
+          <p class="bio-para">Dr. Arun Balaji P is an Assistant Professor in the Department of Computing & Information Systems under the School of Computational Intelligence at Joy University, Kanyakumari, Tamil Nadu, India. He holds a Ph.D. in Mechanical / Mechatronics Engineering from VIT University, Chennai.</p>
+        </div>
+        <button class="faculty-profile-readmore" onclick="toggleBio(this)">Read More</button>
+      </div>
+    </div>
+    
+    <div class="faculty-profile-card">
+      <div class="faculty-profile-img">
+        <img src="https://joyuniversity.edu.in/userfiles/Faculty/cbb909bf77914b6c8a5899aa91623426.webp" alt="Prof. Dr. C. Preethi" />
+      </div>
+      <div class="faculty-profile-info">
+        <div class="faculty-profile-name">Prof. Dr. C. Preethi</div>
+        <div class="faculty-profile-degree">Ph.D - Manonmaniam Sundaranar University</div>
+        <div class="faculty-profile-title">Assistant Professor - School of Computational Intelligence</div>
+        <div class="faculty-profile-bio">
+          <p class="bio-para">Dr. C. Preethi is an Assistant Professor in the Department of Computing & Information Systems under the School of Computational Intelligence at Joy University, Kanyakumari, Tamil Nadu, India. She earned her M.E. and B.E. degrees in Computer Science and Engineering from Infant Jesus College of Engineering, affiliated to Anna University, and her Ph.D. in Computer Science from Manonmaniam Sundaranar University.</p>
+          <p class="bio-para" style="display:none;">She has gained valuable teaching experience during her tenure at SCAD College of Engineering and Technology and Sri Sarada College for Women. She has published several research papers in SCOPUS, SCI, and Web of Science indexed journals. She also presented her work at numerous national and international conferences, focusing on advanced imaging techniques, AI.</p>
+        </div>
+        <button class="faculty-profile-readmore" onclick="toggleBio(this)">Read More</button>
+      </div>
+    </div>
+   
+    <div class="faculty-profile-card">
+      <div class="faculty-profile-img">
+        <img src="https://joyuniversity.edu.in/userfiles/Faculty/604185bb76314c2fa585c592b7d1e00c.jpg" alt="Prof. Dr. Chockalingam A" />
+      </div>
+      <div class="faculty-profile-info">
+        <div class="faculty-profile-name">Prof. Dr. Chockalingam A</div>
+        <div class="faculty-profile-degree">Ph.D - Manonmaniam Sundaranar University</div>
+        <div class="faculty-profile-title">Assistant Professor - School of Computational Intelligence</div>
+        <div class="faculty-profile-bio">
+          <p class="bio-para">Prior to joining Joy University, he served as a faculty member at the Manonmaniam Sundaranar University, Tirunelveli, accumulating over four years of teaching and research experience. He holds a Bachelor’s Degree (B.Tech.) and a Master’s Degree (M.Tech.) in Information and Communication Technologies.</p>
+        </div>
+        <button class="faculty-profile-readmore" onclick="toggleBio(this)">Read More</button>
+      </div>
+    </div>
+    
+    <div class="faculty-profile-card">
+      <div class="faculty-profile-img">
+        <img src="https://joyuniversity.edu.in/userfiles/Faculty/d9827258002a4ba8974e2c4f184420b6.png" alt="Prof. Rahul" />
+      </div>
+      <div class="faculty-profile-info">
+        <div class="faculty-profile-name">Prof. Rahul</div>
+        <div class="faculty-profile-degree">Ph.D - Electronics and Communication</div>
+        <div class="faculty-profile-title">Assistant Professor - School of Computational Intelligence</div>
+        <div class="faculty-profile-bio">
+          <p class="bio-para">Prof. Rahul has qualified GATE Exam (Electronics and Communication) 4 times. He has worked as a coordinator for many workshops and conferences and he has also attended more than ten conferences and workshops. His areas of interest in research are Wireless Sensor Network, Optimization techniques using AI.</p>
+        </div>
+        <button class="faculty-profile-readmore" onclick="toggleBio(this)">Read More</button>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- Main Footer -->
+<footer class="main-footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Disclosure</h3>
+      <ul>
+        <li><a href="https://joyuniversity.edu.in/userfiles/Faculty/7005424a362f4c5ab39011550f4eba93.pdf" rel="noopener" target="_blank">TN Govt. Letter to UGC</a></li>
+        <li><a href="https://joyuniversity.edu.in/userfiles/Faculty/b8e570a214374aee92449bf14cc606b5.pdf" rel="noopener" target="_blank">TN PU ACT</a></li>
+        <li><a href="https://joyuniversity.edu.in/userfiles/Faculty/ea650cc4b6a6437288dc26ee82bb1277.pdf" rel="noopener" target="_blank">TN Govt. Gazette</a></li>
+        <li><a href="https://joyuniversity.edu.in/userfiles/Faculty/442c34826cb048629c4b9348519b5c0f.pdf" rel="noopener" target="_blank">TN Govt. Gazette Commencement</a></li>
+        <li><a href="https://joyuniversity.edu.in/userfiles/Faculty/126bcc489ed440f79ec16db6f674b704.pdf" rel="noopener" target="_blank">TN Govt. UGC Approval</a></li>
+        <li><a href="https://joyuniversity.edu.in/userfiles/Faculty/bcdd53f68c1a42b7b368e2a00823bb59.pdf" rel="noopener" target="_blank">BCI Approval</a></li>
+        <li><a href="https://joyuniversity.edu.in/userfiles/Faculty/27101a9d3f1a4e86a408ffa8fc7f8508.pdf" rel="noopener" target="_blank">PCI Approval</a></li>
+      </ul>
+      <h3>ERP</h3>
+      <ul>
+        <li><a href="#">School of Agricultural Sciences</a></li>
+        <li><a href="#">School of Arts & Natural Sciences</a></li>
+        <li><a href="#">School of Computational Intelligence</a></li>
+        <li><a href="#">School of Design</a></li>
+        <li><a href="#">School of Engineering and Technology</a></li>
+        <li><a href="#">School of Entrepreneurship and Management</a></li>
+        <li><a href="#">School of Law</a></li>
+        <li><a href="#">School of Life & Health Sciences</a></li>
+        <li><a href="#">School of Nursing</a></li>
+        <li><a href="#">School of Pharmacy</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>JU Documents</h3>
+      <ul>
+        <li><a href="#">JU Committees</a></li>
+        <li><a href="#">JU Statutes</a></li>
+        <li><a href="#">JU Ordinances</a></li>
+        <li><a href="#">JU Academic Regulations</a></li>
+        <li><a href="#">JU Examination Regulation</a></li>
+        <li><a href="#">JU Academic Calendar AY 2025-26</a></li>
+        <li><a href="#">JU Leave Rules</a></li>
+        <li><a href="#">Member, NDLI, Min of Education, Govt of India</a></li>
+        <li><a href="#">Member ICT Academy Govt of India</a></li>
+        <li><a href="#">JU Newsletter 2023-24</a></li>
+        <li><a href="#">JU Annual Report 2023-24</a></li>
+        <li><a href="#">JU Newsletter 2024-25</a></li>
+        <li><a href="#">JU Annual Report 2024-2025</a></li>
+        <li><a href="#">Mandatory Disclosure</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Admissions</h3>
+      <ul>
+        <li><a href="#">JU SES Scholarship</a></li>
+        <li><a href="#">JU Fee Structure</a></li>
+        <li><a href="#">JU International Admission</a></li>
+        <li><a href="#">Hostel & Mess Fee</a></li>
+        <li><a href="#">JU Transportation Fee</a></li>
+        <li><a href="#">Joy Scholarships</a></li>
+        <li><a href="#">TN Government Scholarships</a></li>
+        <li><a href="#">JU Admission Flyer</a></li>
+        <li><a href="#">JU Admission Regulation</a></li>
+        <li><a href="#">JU Hostel Policy</a></li>
+        <li><a href="#">JU Transportation Route</a></li>
+        <li><a href="#">Student code of Conduct</a></li>
+      </ul>
+      <h3>Other Links</h3>
+      <ul>
+        <li><a href="https://joyuniversity.edu.in/our-achievements">Achievements</a></li>
+        <li><a href="#">Advisory Board of Eminence</a></li>
+        <li><a href="https://joyuniversity.edu.in/Press-and-Media">Press & Media</a></li>
+        <li><a href="https://joyuniversity.edu.in/our-visitors">Visitors</a></li>
+        <li><a href="https://joyuniversity.edu.in/Contact-Us">Hotline</a></li>
+        <li><a href="https://joyuniversity.edu.in/Disclaimer-privacy-policy-new.pdf">Disclaimer & Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Statutory Bodies</h3>
+      <ul>
+        <li><a href="https://www.ugc.gov.in/">UGC</a></li>
+        <li><a href="https://naac.gov.in/index.php/en/">NAAC</a></li>
+        <li><a href="https://www.nirfindia.org/Home">NIRF</a></li>
+        <li><a href="https://www.aicte-india.org/">AICTE</a></li>
+        <li><a href="https://icar.org.in/">ICAR</a></li>
+        <li><a href="https://www.barcouncilofindia.org/home">BCI</a></li>
+        <li><a href="https://www.pci.nic.in/">PCI</a></li>
+        <li><a href="https://www.indiannursingcouncil.org/">INC</a></li>
+        <li><a href="https://nad.gov.in/">NAD</a></li>
+        <li><a href="https://shodhganga.inflibnet.ac.in/">Shodhganga</a></li>
+        <li><a href="https://esanad.nic.in/">e-Sanad</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2024 School of Computing and Informatics, Joy University. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<!-- Red Social Bar Start -->
+<div class="footer-social-bar">
+  <div class="footer-social">
+    <a aria-label="Facebook" href="https://www.facebook.com/JU.JoyUniversity" rel="noopener" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a aria-label="Instagram" href="https://www.instagram.com/ju.joyuniversity/" rel="noopener" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a aria-label="YouTube" href="https://www.youtube.com/channel/UCwCoUuoAHUpZh2bHpWrYB_w" rel="noopener" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a aria-label="Telegram" href="https://t.me/juJoyuniversity" rel="noopener" target="_blank"><i class="fab fa-telegram"></i></a>
+  </div>
+  <div class="footer-bottom">
+    <span>Copyright @2024</span>
+    <span class="footer-links">
+      <a href="https://joyuniversity.edu.in/sitemap" rel="noopener" target="_blank">Sitemap</a>
+      <a href="https://joyuniversity.edu.in/Disclaimer-privacy-policy-new.pdf" rel="noopener" target="_blank">Privacy Policy</a>
+    </span>
+  </div>
+</div>
+<!-- Red Social Bar End -->
+<script src="assets/js/script.js"></script>
+<script>
+function toggleBio(btn) {
+  const card = btn.closest('.faculty-profile-card');
+  const paras = card.querySelectorAll('.bio-para');
+  const expanded = btn.getAttribute('data-expanded') === 'true';
+  if (!expanded) {
+    paras.forEach(p => p.style.display = 'block');
+    btn.textContent = 'Read Less';
+    btn.setAttribute('data-expanded', 'true');
+  } else {
+    paras.forEach((p, i) => p.style.display = i === 0 ? 'block' : 'none');
+    btn.textContent = 'Read More';
+    btn.setAttribute('data-expanded', 'false');
+  }
+}
+// Ensure only first para is visible on load
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.faculty-profile-card').forEach(card => {
+    const paras = card.querySelectorAll('.bio-para');
+    paras.forEach((p, i) => p.style.display = i === 0 ? 'block' : 'none');
+    const btn = card.querySelector('.faculty-profile-readmore');
+    if (btn) btn.textContent = 'Read More';
+    if (btn) btn.setAttribute('data-expanded', 'false');
+  });
+});
+</script>
+
+</body>
+</html>
