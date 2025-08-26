@@ -5,6 +5,8 @@ This repository contains the initial version (v1.0) of the website developed for
 I was **personally chosen by the Dean** to design and develop this version of the website., but it was **not officially deployed by the university**.  
 It remains as a **student-developed project** and is maintained here for reference and future development.
 
+Live Demo: [https://sociedu.netlify.app/](https://sociedu.netlify.app/)
+
 ---
 
 ## Features (Version 1)
