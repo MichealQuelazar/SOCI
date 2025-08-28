@@ -2874,6 +2874,7 @@ body, html {
 .nav-links li a {
     padding: 14px 20px;
     display: block;
+    background: #8b1c1c
 }
 
 .nav-close {
